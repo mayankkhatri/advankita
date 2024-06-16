@@ -54,8 +54,8 @@
               Don't navigate legal complexities alone contact us now to benefit
               from our expertise and dedicated support.
             </p>
-            <a href="#">Schedule a Meeting</a>
-            <a href="#" class="learn">Learn More</a>
+            <a id="schedule-btn">Schedule a Meeting</a>
+            <a href="#attorneys" class="learn">Learn More</a>
           </div>
         </div>
         <!--?2  -->
@@ -70,7 +70,7 @@
               everything else, making us standout for all these years in the
               field.
             </p>
-            <a href="#" style="margin-top: 2rem">Schedule a Meeting</a>
+            <a id="schedule-btn" style="margin-top: 2rem">Schedule a Meeting</a>
           </div>
         </div>
         <!-- ?3 -->
@@ -84,7 +84,7 @@
               We have a proven track record of success, having won numerous
               cases and secured favorable outcomes for our clients.
             </p>
-            <a href="#">Schedule a Meeting</a>
+            <a id="schedule-btn">Schedule a Meeting</a>
           </div>
         </div>
         <!-- ?4 -->
@@ -98,7 +98,7 @@
               We specialize in various fields of law, ensuring you get the best
               legal support possible.
             </p>
-            <a href="#">Schedule a Meeting</a>
+            <a id="schedule-btn">Schedule a Meeting</a>
           </div>
         </div>
         <!-- ?5 -->
@@ -112,7 +112,7 @@
               Our team consists of highly skilled attorneys with decades of
               combined experience in various legal disciplines.
             </p>
-            <a href="#">Schedule a Meeting</a>
+            <a id="schedule-btn">Schedule a Meeting</a>
           </div>
         </div>
       </div>
@@ -582,9 +582,13 @@
           <div class="contact-details">
             <p>legal.ankita95@gmail.com</p>
             <p>+91 9876543210</p>
-            <a>Instagram</a>
-            <a>LinkedIn</a>
-            <a>Facebook</a>
+            <a href="https://www.instagram.com/advocate_ankita_goswami"
+              >Instagram</a
+            >
+            <a href="https://www.linkedin.com/in/adv-ankita-goswami-37261b93"
+              >LinkedIn</a
+            >
+            <a href="https://www.facebook.com/Legalankita999/">Facebook</a>
             <p>Mon - Sat (9AM - 5PM)</p>
           </div>
           <div class="map">
@@ -613,6 +617,56 @@
       <h1>Ankita & Associates</h1>
     </footer>
 
+    <section class="widgets">
+      <div class="whatsapp">
+        <div class="whatsapp-widget">
+          <div class="chat-popup" id="chatPopup">
+            <div class="header">
+              <img
+                src="https://i.postimg.cc/Y0R2PycW/3.jpg"
+                alt="Advocate Ankita"
+                class="user-image"
+              />
+              <div class="user-info">
+                <h4>Adv. Ankita</h4>
+                <p>Online</p>
+              </div>
+              <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+            <div class="chat-body">
+              <p>
+                Hi there, 👋 <br />
+                How Can I Help You?
+              </p>
+            </div>
+            <a href="https://wa.link/8m2v4x" class="chat-btn" target="_blank"
+              >Chat on WhatsApp</a
+            >
+          </div>
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo-whatsapp-512.png"
+            alt="WhatsApp Icon"
+            class="whatsapp-icon"
+            id="whatsappIcon"
+          />
+        </div>
+      </div>
+      <!-- contact popup -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span id="close-btn">&times;</span>
+          <h2>Contact Us</h2>
+          <span>Choose one below👇🏻 </span>
+          <p><a href="tel:+919876543210">Call: +91 9876543210</a></p>
+          <p>
+            <a href="https://wa.link/8m2v4x" target="_blank"
+              >Chat on WhatsApp</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     <script>
       document.querySelectorAll(".review-card").forEach((card) => {
@@ -626,6 +680,46 @@
         .addEventListener("click", () => {
           window.open("https://maps.app.goo.gl/4FpiePVCM15imKKF7", "_blank");
         });
+    </script>
+    <script>
+      document
+        .getElementById("whatsappIcon")
+        .addEventListener("click", function () {
+          document.getElementById("chatPopup").style.display = "block";
+        });
+
+      document
+        .getElementById("closeBtn")
+        .addEventListener("click", function () {
+          document.getElementById("chatPopup").style.display = "none";
+        });
+
+      // contact pupup.js
+      document
+        .getElementById("contact-a")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "flex";
+        });
+
+      document
+        .querySelector("#close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "none";
+        });
+
+      window.addEventListener("click", function (event) {
+        if (event.target == document.getElementById("popup")) {
+          document.getElementById("popup").style.display = "none";
+        }
+      });
+
+      // schedule btn
+      document.querySelectorAll("#schedule-btn").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          document.getElementById("popup").style.display = "flex";
+        });
+      });
     </script>
   </body>
 </html>

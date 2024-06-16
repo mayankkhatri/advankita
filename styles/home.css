@@ -27,6 +27,7 @@ body {
   margin-top: 6px;
   border-bottom: 1px solid #ebeaeb89;
   border-radius: 1rem;
+  margin-bottom: -5px;
 }
 
 .logo img {

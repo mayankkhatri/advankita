@@ -256,7 +256,10 @@ body {
 
 /*? Promise Section  */
 
-#promise {
+.center-txt {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: -1rem;
 }
 .promise-card {
   position: relative;
@@ -344,6 +347,161 @@ body {
   height: 40px;
   background-color: #fff;
   margin: 0 auto 20px;
+}
+
+/* blog  */
+
+.blog .flickity-viewport {
+  height: 53vw !important;
+}
+
+.carousel-blog {
+}
+
+.carousel-cell-blog {
+  width: 50vw;
+  height: 45vw;
+  margin: 0 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.blog h2 {
+  text-align: center;
+  margin-bottom: 1.35rem;
+  margin-top: -0.75rem;
+}
+
+.carousel-cell-blog h3 {
+  font-weight: 470;
+  font-size: 0.7rem;
+  margin-left: 0.2rem;
+  text-wrap: nowrap;
+}
+/* Reviews */
+
+.center-txt-t {
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.reviews-section {
+  text-align: center;
+  margin: 20px;
+}
+
+.review-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.reviews-section h2 {
+  font-weight: 550;
+}
+
+.rev-sum {
+  margin-bottom: 0.6rem;
+}
+.review-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  width: 55vw;
+  position: relative;
+}
+
+.google-icon {
+  position: absolute;
+  width: 32px;
+  right: 10px;
+  top: 10px;
+}
+
+.review-card p {
+  font-size: 0.7rem;
+}
+.review-card img {
+  border-radius: 50%;
+}
+.write-review-btn {
+  background-color: #007bff;
+  padding: 5px 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/*Contact   */
+.center-txt-c {
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  margin-top: 2rem;
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  flex: 1;
+  margin-right: 20px;
+}
+.map-embed {
+  flex: 1;
+  border-radius: 1rem;
+}
+
+.contact-details p {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+.contact-details p:nth-child(1) {
+  font-weight: 600;
+  margin-top: 0;
+}
+.contact-details a {
+  display: block;
+  margin: 1rem 0;
+  color: #007bff;
+}
+
+.office-address {
+  font-size: 0.6rem;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #4d4d4f;
+}
+
+footer h1 {
+  text-align: center;
+  color: #262626;
 }
 
 /* Responsive Design */

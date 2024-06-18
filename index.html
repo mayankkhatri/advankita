@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Advocate Ankita and Associates | Advocate Ankita Goswami | Best Advocate
-      in Ahemdabad
+      Advocate Ankita Goswami and Associates | Advocate Ankita Goswami
     </title>
     <meta
       name="description"
@@ -25,23 +24,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <img
           src="https://i.postimg.cc/fbCwy9P7/agass-logo.jpg"
-          alt="Advocate Ankita and Associates Logo"
+          alt="Advocate Ankita Goswami and Associates Logo"
         />
       </div>
       <nav class="nav">
-        <a href="#blog">Blog</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
+        <a
+          href="https://khatrie.notion.site/Ankita-s-Blog-962da7005a2149b3a4053ac9753d4d2a"
+          >Blog</a
+        >
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
         <a href="#contact" id="contact-a">Contact</a>
       </nav>
     </header>
@@ -85,7 +83,9 @@
         <!-- ?3 -->
         <div
           class="carousel-cell"
-          style="background-image: url('https://i.postimg.cc/wBRvBVNC/4.jpg')"
+          style="
+            background-image: url('https://i.postimg.cc/jSL8Q7Dz/swiper-photos.jpg');
+          "
         >
           <div class="overlay">
             <h1>Proven Track Record</h1>
@@ -285,8 +285,8 @@
       <div class="promise-card fade-section">
         <h2>Personalized Service</h2>
         <p>
-          At <strong>Ankita & Associates</strong>, we offer personalized client
-          service that's tailored to your unique needs. From the initial
+          At <strong>Ankita Goswami & Associates</strong>, we offer personalized
+          client service that's tailored to your unique needs. From the initial
           consultation to ongoing support, we listen closely to understand your
           goals and provide customized solutions. Our dedicated team is
           committed to ensuring you feel valued and supported throughout our
@@ -332,7 +332,7 @@
         <h2>100% Client Satisfaction</h2>
         <p>
           Client Satisfaction is our first priority. At Advocate
-          <strong> Ankita and Associates </strong>, we are committed to
+          <strong> Ankita Goswami and Associates </strong>, we are committed to
           delivering 100% client satisfaction through personalized legal
           services, dedicated support, and transparent communication. Our team
           of experienced attorneys works tirelessly to understand your unique
@@ -418,7 +418,10 @@
         data-flickity='{ "wrapAround": true, "pageDots": false }'
       >
         <!-- Carousel cells -->
-        <div class="carousel-cell-blog">
+        <div
+          class="carousel-cell-blog"
+          data-link="https://khatrie.notion.site/How-we-Handle-Corporate-Cases-ce1847912c5940fcb0621107d4bb0a0e"
+        >
           <img
             loading="lazy"
             class="blog-pic"
@@ -427,7 +430,10 @@
           />
           <h3>How we handle corporate cases?</h3>
         </div>
-        <div class="carousel-cell-blog">
+        <div
+          class="carousel-cell-blog"
+          data-link="https://khatrie.notion.site/What-are-the-taxation-laws-in-India-05409e8c207444ff9e1b70587611b3b6"
+        >
           <img
             loading="lazy"
             class="blog-pic"
@@ -436,7 +442,10 @@
           />
           <h3>What are the taxation laws in India?</h3>
         </div>
-        <div class="carousel-cell-blog">
+        <div
+          class="carousel-cell-blog"
+          data-link="https://khatrie.notion.site/The-Boom-of-Banking-Sector-in-India-eae7e28e5aa14611b0a49f8e3ca7b730?pvs=25"
+        >
           <img
             loading="lazy"
             class="blog-pic"
@@ -445,7 +454,10 @@
           />
           <h3>The Boom of Banking Sector in India?</h3>
         </div>
-        <div class="carousel-cell-blog">
+        <div
+          class="carousel-cell-blog"
+          data-link="https://khatrie.notion.site/How-to-legally-navigate-cyber-crime-8294955c3fff4231ac94804c1ed502ff?pvs=25"
+        >
           <img
             loading="lazy"
             class="blog-pic"
@@ -454,7 +466,10 @@
           />
           <h3>How to legally navigate cyber crime?</h3>
         </div>
-        <div class="carousel-cell-blog">
+        <div
+          class="carousel-cell-blog"
+          data-link="https://khatrie.notion.site/Legal-actions-for-cheque-bounce-7f2d3f865a4d49eeaff25837560b58a5?pvs=25"
+        >
           <img
             loading="lazy"
             class="blog-pic"
@@ -639,7 +654,7 @@
 
     <footer>
       <div class="horizontal-line"></div>
-      <h1>Ankita & Associates</h1>
+      <h1>Ankita Goswami & Associates</h1>
     </footer>
 
     <section class="widgets">
@@ -694,71 +709,6 @@
     </section>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        ScrollReveal().reveal(".fade-section", {
-          duration: 900,
-          distance: "50px",
-          easing: "ease-in-out",
-          origin: "bottom",
-          opacity: 0,
-          scale: 0.85,
-          reset: true, // Animation can happen each time an element comes into view
-        });
-      });
-    </script>
-    <script>
-      document.querySelectorAll(".review-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          window.open(card.getAttribute("data-url"), "_blank");
-        });
-      });
-
-      document
-        .querySelector(".write-review-btn")
-        .addEventListener("click", () => {
-          window.open("https://maps.app.goo.gl/4FpiePVCM15imKKF7", "_blank");
-        });
-    </script>
-    <script>
-      document
-        .getElementById("whatsappIcon")
-        .addEventListener("click", function () {
-          document.getElementById("chatPopup").style.display = "block";
-        });
-
-      document
-        .getElementById("closeBtn")
-        .addEventListener("click", function () {
-          document.getElementById("chatPopup").style.display = "none";
-        });
-
-      // contact pupup.js
-      document
-        .getElementById("contact-a")
-        .addEventListener("click", function () {
-          document.getElementById("popup").style.display = "flex";
-        });
-
-      document
-        .querySelector("#close-btn")
-        .addEventListener("click", function () {
-          document.getElementById("popup").style.display = "none";
-        });
-
-      window.addEventListener("click", function (event) {
-        if (event.target == document.getElementById("popup")) {
-          document.getElementById("popup").style.display = "none";
-        }
-      });
-
-      // schedule btn
-      document.querySelectorAll("#schedule-btn").forEach(function (element) {
-        element.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-          document.getElementById("popup").style.display = "flex";
-        });
-      });
-    </script>
+    <script src="scripts/home.js"></script>
   </body>
 </html>

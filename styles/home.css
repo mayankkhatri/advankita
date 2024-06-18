@@ -15,6 +15,86 @@ a {
   text-decoration: none;
 }
 
+/* disclaimer */
+
+.unique-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.unique-popup-content p {
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+.unique-popup-buttons {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unique-popup-buttons a {
+  font-size: 0.83rem !important;
+  padding: 12px 20px;
+  background-color: #051020;
+  border-radius: 0.2rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.unique-popup-buttons a:hover {
+  background-color: #0056b3;
+}
+
+.unique-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.unique-popup-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.unique-popup-buttons button {
+  padding: 12px 20px;
+  border-radius: 0.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.unique-popup-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* disclaimer */
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -357,9 +437,6 @@ body {
   height: 53vw !important;
 }
 
-.carousel-blog {
-}
-
 .carousel-cell-blog {
   width: 50vw;
   height: 45vw;
@@ -472,9 +549,14 @@ body {
   flex: 1;
   margin-right: 20px;
 }
+.map {
+  position: relative;
+}
 .map-embed {
   flex: 1;
   border-radius: 1rem;
+  position: absolute;
+  right: 0;
 }
 
 .contact-details p {
@@ -493,7 +575,9 @@ body {
 
 .office-address {
   font-size: 0.6rem;
-  text-align: center;
+  text-align: left;
+  transform: translateY(180px);
+  width: 150px;
 }
 
 .horizontal-line {
@@ -651,5 +735,128 @@ footer h1 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .carousel-cell {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel-cell .overlay h1 {
+    font-size: 3rem;
+  }
+
+  .carousel-cell .overlay p {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  .carousel-cell .overlay a {
+    font-size: 1.5rem;
+  }
+  .about-card {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+  .about-card p {
+    font-size: 1.2rem;
+  }
+  .service-area {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .custom-carousel .flickity-viewport {
+    height: 300px !important;
+  }
+
+  .custom-carousel-cell {
+    width: 250px;
+    height: 250px;
+  }
+  .custom-carousel-cell span {
+    font-weight: 550;
+    color: #262626;
+    transform: translateY(20px);
+  }
+  .carousel-cell-attorney {
+    width: 75vw;
+  }
+  .carousel-cell-attorney img {
+    width: 75vw;
+  }
+  .promise-card {
+    width: 40%;
+    margin: 2rem auto;
+  }
+  .promise-card p {
+    font-size: 1.1rem;
+    font-weight: 420;
+  }
+  .blog .flickity-viewport {
+    height: 280px !important;
+  }
+
+  .carousel-cell-blog {
+    width: 250px;
+    height: 250px;
+    margin: 0 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .blog h2 {
+    text-align: center;
+    margin-bottom: 1.35rem;
+    margin-top: -0.75rem;
+  }
+
+  .carousel-cell-blog h3 {
+    font-weight: 470;
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+    text-wrap: nowrap;
+  }
+
+  .review-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    padding: 0 2rem;
+  }
+
+  .review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 350px;
+    position: relative;
+  }
+
+  .review-card p {
+    font-size: 0.85rem;
+  }
+  .review-card img {
+    border-radius: 50%;
+  }
+
+  .center-txt-c {
+    margin-top: -1rem;
+  }
 }

@@ -99,6 +99,19 @@
         margin-top: 0 !important;
         padding-top: 5px !important;
       }
+
+      .popup-content {
+        color: black;
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 60%;
+        }
+
+        .profile-pic {
+          width: 400px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -139,7 +152,7 @@
         <p>Diploma in Cyber Crime & online fraud</p>
       </div>
 
-      <a href="index.html" class="btn">Get Consultation</a>
+      <a class="btn">Get Consultation</a>
 
       <div class="specialty">
         <h2>Our Specialty</h2>
@@ -167,9 +180,7 @@
           <li>15. Public Interest Litigation (PIL)</li>
           <li>16. Quashing Petitions</li>
         </ul>
-        <a href="index.html" class="btn" style="margin-top: 1rem"
-          >Get Consultation</a
-        >
+        <a class="btn" style="margin-top: 1rem">Get Consultation</a>
       </div>
 
       <div class="conveyancing">
@@ -193,7 +204,35 @@
         </ul>
       </div>
 
-      <a href="index.html" class="btn">Get Consultation</a>
+      <a class="btn">Get Consultation</a>
     </div>
+
+    <!-- contact popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="close-btn">&times;</span>
+        <h2>Contact Us</h2>
+        <span>Choose one below👇🏻 </span>
+        <p><a href="tel:+919157658443">Call: +91 9157658443</a></p>
+        <p>
+          <a href="https://wa.link/8m2v4x" target="_blank">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".btn").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          document.getElementById("popup").style.display = "flex";
+        });
+      });
+
+      document
+        .querySelector("#close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "none";
+        });
+    </script>
   </body>
 </html>

@@ -51,6 +51,15 @@ document.querySelectorAll("#schedule-btn").forEach(function (element) {
   });
 });
 
+// Services cards
+// schedule btn
+document.querySelectorAll(".custom-carousel-cell").forEach(function (element) {
+  element.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+    document.getElementById("popup").style.display = "flex";
+  });
+});
+
 // Blog cards
 
 // Select all carousel cells
@@ -65,3 +74,24 @@ cells.forEach(function (cell) {
     }
   });
 });
+
+// disclaimer
+// Function to open the popup when the page first loads
+window.addEventListener("load", function () {
+  document.getElementById("disclaimerPopup").style.display = "block";
+});
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById("disclaimerPopup").style.display = "none";
+}
+
+// Function to handle agreement
+function agree() {
+  document.getElementById("disclaimerPopup").style.display = "none";
+}
+
+// Function to handle disagreement (redirect to Google)
+function disagree() {
+  window.location.href = "https://www.google.com";
+}

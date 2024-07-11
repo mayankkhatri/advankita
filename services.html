@@ -483,13 +483,19 @@
       </div>
     </div>
 
-    <div class="info-card">
-      <h2>Need More Information?</h2>
-      <p>
-        If you have any questions or need more information, please don't
-        hesitate to contact us.
-      </p>
-      <a href="contact.html">Contact Us Now</a>
-    </div>
+    <script>
+      document.querySelectorAll(".btn").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          document.getElementById("popup").style.display = "flex";
+        });
+      });
+
+      document
+        .querySelector("#close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "none";
+        });
+    </script>
   </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Animation</title>
+    <style>
+      h3 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="incr-anim" id="counter1">100+</h3>
+    <h3 class="incr-anim" id="counter2">50%</h3>
+    <h3 class="incr-anim" id="counter3">75</h3>
+    <h3 class="incr-anim" id="counter4">45</h3>
+    <!-- Add more h3 elements with class "incr-anim" as needed -->
+
+    <script>
+      function animateValue(obj, start, end, duration, pauseDuration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          obj.textContent = Math.floor(progress * (end - start) + start);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            setTimeout(() => {
+              startTimestamp = null;
+              window.requestAnimationFrame(step);
+            }, pauseDuration);
+          }
+        };
+        window.requestAnimationFrame(step);
+      }
+
+      document.querySelectorAll(".incr-anim").forEach((element) => {
+        const textContent = element.textContent;
+        const numericValue = parseInt(textContent.replace(/[^\d]/g, ""), 10); // Extract only the numeric part
+        animateValue(element, 0, numericValue, 2000, 2000);
+      });
+    </script>
+  </body>
+</html>

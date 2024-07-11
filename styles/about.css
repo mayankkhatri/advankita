@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  text-align: justify;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.profile-info h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.profile-info p {
+  font-size: 1rem;
+}
+
+.qualifications,
+.approach,
+.specialty {
+  margin: 2rem 0;
+}
+
+.qualifications {
+  margin-bottom: 0;
+}
+
+.qualifications h2,
+.approach h2,
+.specialty h2 {
+  background-color: #111;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.qualifications ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.qualifications ul li {
+  margin: 1rem 0;
+}
+
+.approach p {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.specialty-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.contact-btn-card {
+  margin-top: 0.7rem !important;
+}
+
+.highlight-card {
+  max-width: 90vw;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.highlight-card h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.highlight-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.highlight-card ul li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+.highlight-card ul li::before {
+  content: "✓";
+  color: #007bff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+.highlight-card a {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  color: dodgerblue;
+}
+.qualifications li {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 5rem;
+  }
+
+  .profile-img img {
+    border-radius: 10px;
+    height: 50vh;
+    width: 50vh !important;
+  }
+
+  .profile {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .profile-info p {
+    font-size: 1.2rem !important;
+  }
+  .profile-info {
+    margin-left: 2rem;
+  }
+
+  .specialty-cards {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+  li {
+    font-size: 1.3rem;
+  }
+  .highlight-card a {
+    font-size: 1.4rem;
+  }
+  .profile-info p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .profile-info p {
+    font-size: 1.4rem !important;
+  }
+}

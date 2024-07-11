@@ -26,33 +26,53 @@
     />
   </head>
   <body>
-    <div id="disclaimerPopup" class="unique-popup">
-      <div class="unique-popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h2>Disclaimer</h2>
-        <p>
-          Current rules of the Bar Council of India impose restrictions on
-          maintaining a web page and do not permit lawyers to provide
-          information concerning their areas of practice.Ankita Goswami and
-          Associates of the Bar Council of India prohibit law firms from
-          soliciting work or advertising in any manner. The user wishes to gain
-          more information about Ankita Goswami and Associates, its practice
-          areas and its attorneys, for his/her own information and use. The
-          information is made available/provided to the user only on his/her
-          specific request and any information obtained or material downloaded
-          from this website is completely at the user's volition and any
-          transmission, receipt or use of this site is not intended to, and will
-          not, create any lawyer-client relationship. None of the information
-          contained on the website is in the nature of a legal opinion or
-          otherwise amounts to any legal advice. Ankita Goswami and Associates
-          is not liable for any consequence of any action taken by the user
-          relying on material/information provided under this website. In cases
-          where the user has any legal issues, he/she in all cases must seek
-          independent legal advice.
-        </p>
-        <div class="unique-popup-buttons">
-          <button onclick="agree()">Agree</button>
-          <a href="https://www.google.com" class="disagree-btn">Disagree</a>
+    <div id="disclaimer-modal" class="disclaimer-modal">
+      <div class="disclaimer-content">
+        <div class="disclaimer-header">
+          <img
+            src="https://i.postimg.cc/fbCwy9P7/agass-logo.jpg"
+            alt="Ankita Goswami and Associates Logo"
+            class="logo"
+          />
+        </div>
+        <div class="disclaimer-body">
+          <h2>Disclaimer</h2>
+          <p>
+            The Bar Council of India does not permit solicitation of work and
+            advertising by legal practitioners and advocates. By accessing the
+            Ankita Goswami and Associates website (our website), the user
+            acknowledges that:
+          </p>
+          <ul>
+            <li>
+              The user wishes to gain more information about us for his/her
+              information and use. He/She also acknowledges that there has been
+              no attempt by us to advertise or solicit work.
+            </li>
+            <li>
+              Any information obtained or downloaded by the user from our
+              website does not lead to the creation of the client – attorney
+              relationship between the Firm and the user.
+            </li>
+            <li>
+              None of the information contained in our website amounts to any
+              form of legal opinion or legal advice.
+            </li>
+            <li>
+              Our website uses cookies to improve your user experience. By using
+              our site, you agree to our use of cookies. To find out more,
+              please see our <a href="#">Cookies Policy</a> &
+              <a href="#">Privacy Policy</a>.
+            </li>
+            <li>
+              All information contained in our website is the intellectual
+              property of the Firm.
+            </li>
+          </ul>
+        </div>
+        <div class="disclaimer-footer">
+          <button id="agree-btn" class="btn">Agree</button>
+          <button id="disagree-btn" class="btn">Disagree</button>
         </div>
       </div>
     </div>
@@ -72,7 +92,7 @@
         >
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
-        <a href="#contact" id="contact-a">Contact</a>
+        <a href="contact.html" id="contact-a">Contact</a>
       </nav>
     </header>
     <section class="photo-carousel">
@@ -105,7 +125,7 @@
           <div class="overlay">
             <h1>A Name You Can Trust</h1>
             <p>
-              At Anktia & Associates we put client satisfaction first over
+              At Ankita & Associates we put client satisfaction first over
               everything else, making us standout for all these years in the
               field.
             </p>
@@ -263,75 +283,392 @@
         </div>
       </div>
     </section>
+    <!-- About us  -->
+
+    <section class="about-us-block">
+      <h3>About Us</h3>
+
+      <div class="about-us-card">
+        <div class="about-image">
+          <img src="https://i.postimg.cc/rmSw1wQg/1.jpg" alt="" />
+        </div>
+        <div class="about-content">
+          <h5>Welcome to Ankita Goswami & Associates</h5>
+          <p>
+            We at Ankita Goswami & Associates pride ourselves on being a family
+            of advocates dedicated to offering comprehensive and high-quality
+            consultancy services. Our goal is to simplify all your legal needs
+            and address them with expertise and care. With a team of skilled
+            professionals, we provide personalized solutions tailored to each
+            client's unique circumstances, ensuring that you receive the best
+            possible advice and representation.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-us-card">
+        <div class="about-content">
+          <h5>Rely on our experience, Trust in our expertise</h5>
+          <p>
+            Rely on our experience, Trust in our expertise Ankita Goswami
+            Advocates are leading experts in various areas of law. Putting our
+            clients' satisfaction first and delivering a hassle-free service for
+            the past 5 years and our distinct blend of seasoned expertise and
+            youthful energy sets us apart from other law firms in the country.
+            Choose us with your eyes close and we'll make sure you never regret
+            it.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="https://i.postimg.cc/RFfyLx7J/image_14_(1).png" alt="" />
+        </div>
+      </div>
+
+      <div class="about-us-card">
+        <div class="about-image">
+          <img src="https://i.postimg.cc/Gm61FQWN/image-16.png" alt="" />
+        </div>
+        <div class="about-content">
+          <h5>Why our clients choose to work with us over other?</h5>
+          <p>
+            Our law office is committed to providing from 10 precise legal
+            solutions for clients across Ahmedabad Gujarat. Ankita Goswami and
+            associates recognised as a top lawyer in Ahmedabad has established a
+            solid reputation in divorce, civil, criminal, cyber crime, family
+            law, consumer disputes and various other practice areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About us  -->
 
     <section id="attorneys">
-      <h2>Meet the Attorneys</h2>
+      <h2 class="center-a">Meet the Attorneys</h2>
 
       <div
         class="carousel-attorney"
         data-flickity='{ "wrapAround": true, "pageDots": true, "autoPlay": 3000 }'
       >
         <!-- Carousel cells -->
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            src="https://i.postimg.cc/jq6T8dtD/ankita-5-11zon.png"
-            alt="Attorney Photo"
-          />
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Ankita D Goswami</h2>
+            <p>
+              Ankita is a dedicated and compassionate lawyer with a strong
+              background in law. She brings a wealth of experience and expertise
+              to every case, understanding her clients' unique needs.
+            </p>
+            <p>
+              <strong>Bcom/LLB, Gujarat University</strong><br />
+              <strong>LLM in Business & Corporate Law</strong>
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Civil and property law,
+              service-related matters, education matters
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">227</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">5</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">94</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/FRWN8cSK/i_(1).png"
+              alt="Adv. Ankita D Goswami"
+            />
+            <p>Adv. Ankita Goswami</p>
+          </div>
         </div>
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            src="https://i.postimg.cc/pLrtXf8j/darshan-1-11zon.png"
-            alt="Attorney Photo"
-          />
+        <!-- Carousel cells -->
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Dinesh D Gautam</h2>
+            <p>
+              Dinesh is a committed and knowledgeable lawyer with extensive
+              experience in corporate law. He leverages his expertise to provide
+              exceptional legal services.
+            </p>
+            <p>
+              <strong>BA/LLB (Adv. Gujarat High Court)</strong>
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Criminology and Crime Related
+              Matters
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">227</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">5</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">94</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/hjcZ4w78/image_12_5_11zon.png"
+              alt="Adv. Dinesh"
+            />
+            <p>Adv. Dinesh D Gautam</p>
+          </div>
         </div>
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            src="https://i.postimg.cc/pX2H3bLq/Dinesh-2-11zon.png"
-            alt="Attorney Photo"
-          />
+        <!-- Carousel cells -->
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Darshan Panchal</h2>
+            <p>
+              Darshan is a highly experienced and dedicated attorney with a
+              robust background in Metropolitian law.
+            </p>
+            <p>
+              <strong>BCOM/LLB (Adv. Metropolitian Magistrate Court) </strong>
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Family matters, Muddamal,
+              prohibition and notice, police complaints and 138 cheque bounce
+              cases
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">200</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">5</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">95</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/nLvwJZMc/image_12_(1)_4_11zon.png"
+              alt="Adv. Darshan Panchal"
+            />
+            <p>Adv. Darshan Panchal</p>
+          </div>
         </div>
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            loading="lazy"
-            src="https://i.postimg.cc/TYC667yG/hardik-3-11zon.png"
-            alt="Attorney Photo"
-          />
+        <!-- Carousel cells -->
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Jainam N Shah</h2>
+            <p>
+              Jainam is a skilled and empathetic lawyer with a broad range of
+              experience in family law.
+            </p>
+            <p>
+              <strong
+                >Bcom/LLB (Metropolitan Magistrate & Session Court)</strong
+              >
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Trial courts matters, Including
+              all the miscellaneous work such as affidavit, court marriages,
+              prohibition, recovery of Muddamal, bails, domestic violence
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">107</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">2</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">92</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/D0Yxgwp5/image_12_(2)_3_11zon.png"
+              alt="Adv. Jainam"
+            />
+            <p>Adv. Jainam N Shah</p>
+          </div>
         </div>
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            loading="lazy"
-            src="https://i.postimg.cc/9QkH4Dtn/jainam-4-11zon.png"
-            alt="Attorney Photo"
-          />
+        <!-- Carousel cells -->
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Hardik Jaisur</h2>
+            <p>
+              Hardik is a diligent and knowledgeable lawyer with a strong focus
+              on business law. His strategic approach and thorough understanding
+              of legal principles.
+            </p>
+            <p>
+              <strong
+                >Bcom/LLB (Revenue Court, SSRD Court & District Courts)</strong
+              >
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Non Litigation Conveyance, Like
+              revenue matters and Dastavej etc.
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">87</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">2</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">98</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/fybHm9CJ/image_12_(3)_2_11zon.png"
+              alt="Adv. Hardik"
+            />
+            <p>Adv. Hardik Jaisur</p>
+          </div>
         </div>
-        <div class="carousel-cell-attorney">
-          <img
-            class="attorney-pic"
-            loading="lazy"
-            src="https://i.postimg.cc/KvYMx2T0/Sagar-kedia-1-11zon.png"
-            alt="Attorney Photo"
-          />
+        <!-- Carousel cells -->
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Sagar Kadiya</h2>
+            <p>
+              Sagar is an expert and professional lawyer with a strong focus on
+              Trademarks & Registration laws.
+            </p>
+            <p>
+              <strong>Bcom/LLB (Civil Courts & IPAB)</strong>
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Registration of Trademark,
+              copyright designs and patents, Intellectual property rights, ISO,
+              FSSAI, GMP, GEM, NSIC License
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">487</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">12</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">93</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/63cj80dk/image_12_(4)_1_11zon.png"
+              alt="Adv. Sagar"
+            />
+            <p>Adv. Sagar Kadiya</p>
+          </div>
+        </div>
+        <!-- Carousel cells -->
+        <div class="lawyer-card">
+          <div class="lawyer-info">
+            <h2>Adv. Ritu V. Singh</h2>
+            <p>
+              Ritu V. Singh is a distinguished advocate with a proven track
+              record of excellence in legal practice. With a deep understanding
+              in Real Estate Laws.
+            </p>
+            <p>
+              <strong>Bcom/LLB (Gujarat High Court)</strong>
+            </p>
+            <p>
+              <strong>Area of practice:</strong> Real Estate (Regulation and
+              Development) Act,
+            </p>
+            <div class="stats">
+              <div>
+                <h3><span class="incr-anim">315</span>+</h3>
+                <p>Cases Won</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">9</span>+</h3>
+                <p>Year Exp.</p>
+              </div>
+              <div>
+                <h3><span class="incr-anim">96</span>%</h3>
+                <p>Win Rate</p>
+              </div>
+            </div>
+            <button onclick="location.href='contact.html'">
+              Get Consultation
+            </button>
+          </div>
+          <div class="lawyer-image">
+            <img
+              src="https://i.postimg.cc/ht3bjY03/image-12-6.png"
+              alt="Adv. Ritu"
+            />
+            <p>Adv. Ritu V. Singh</p>
+          </div>
         </div>
       </div>
     </section>
     <section id="promise">
-      <h2 class="center-txt">Our Promises</h2>
+      <h2 class="center-txt">Why Choose Us?</h2>
       <!-- promise cards -->
       <div class="promise-card fade-section">
         <h2>Personalized Service</h2>
         <p>
-          At <strong>Ankita Goswami & Associates</strong>, we offer personalized
-          client service that's tailored to your unique needs. From the initial
-          consultation to ongoing support, we listen closely to understand your
-          goals and provide customized solutions. Our dedicated team is
-          committed to ensuring you feel valued and supported throughout our
-          partnership, with expert advice and personalized attention at every
-          step.
+          At <strong>Ankita Goswami & Associates</strong>, we provide
+          personalized client service designed specifically for your individual
+          needs. From our first consultation to continuous support, we listen
+          attentively to grasp your objectives and deliver tailored solutions.
+          Our committed team is dedicated to making sure you feel appreciated
+          and assisted throughout our collaboration, offering expert guidance
+          and personalized care every step of the way.
         </p>
         <span class="pr-illus"
           ><img src="https://i.postimg.cc/Hn9v98rY/Untitled-design-19.png"
@@ -340,12 +677,12 @@
       <div class="promise-card fade-section">
         <h2>Strong Advocacy</h2>
         <p>
-          We are dedicated to providing strong advocacy to my clients, ensuring
-          that their rights are protected and their voices are heard. With a
-          deep commitment to your case, we offer expertise and strategic
-          planning to navigate legal challenges effectively. Rest assured, we
-          stand by you every step of the way, delivering the relentless advocacy
-          you deserve to achieve the best possible outcomes.
+          We are committed to delivering robust advocacy for our clients,
+          ensuring their rights are safeguarded and their voices are heard. With
+          a steadfast dedication to your case, we provide expert guidance and
+          strategic planning to navigate legal hurdles effectively. You can
+          trust us to support you at every stage, delivering the relentless
+          advocacy you need to achieve optimal outcomes.
         </p>
         <span class="pr-illus-r"
           ><img
@@ -357,12 +694,13 @@
       <div class="promise-card fade-section">
         <h2>Practical Advice</h2>
         <p>
-          We Provide practical advice that is tailored to your specific needs
-          and goals. Drawing upon my legal expertise and real-world experience,
-          we offer actionable insights and strategic guidance that empower you
-          to make informed decisions and navigate legal challenges effectively.
-          My approach focuses on delivering solutions that are not only legally
-          sound but also practical.
+          We offer personalized, practical advice that aligns with your specific
+          needs and goals. Drawing on our legal expertise and real-world
+          experience, we provide actionable insights and strategic guidance.
+          This empowers you to make informed decisions and effectively navigate
+          legal challenges. Our approach emphasizes delivering solutions that
+          are not only legally sound but also highly practical and beneficial to
+          your situation.
         </p>
         <span class="pr-illus"
           ><img src="https://i.postimg.cc/J0BzDqFH/Untitled-design-21.png"
@@ -372,11 +710,15 @@
         <h2>100% Client Satisfaction</h2>
         <p>
           Client Satisfaction is our first priority. At Advocate
-          <strong> Ankita Goswami and Associates </strong>, we are committed to
-          delivering 100% client satisfaction through personalized legal
-          services, dedicated support, and transparent communication. Our team
-          of experienced attorneys works tirelessly to understand your unique
-          needs, ensuring that you receive the best possible outcome.
+          <strong> Ankita Goswami and Associates </strong>ensuring client
+          satisfaction is paramount to our practice. We strive to achieve this
+          by providing personalized legal services that are tailored
+          specifically to meet your needs. Our commitment extends to offering
+          dedicated support throughout your legal journey and maintaining clear
+          and open communication at all times. With a team of experienced
+          attorneys, we diligently work to grasp the intricacies of your
+          situation, ensuring that every effort is made to secure the optimal
+          outcome for you.
         </p>
         <span class="pr-illus-r"
           ><img
@@ -399,8 +741,9 @@
           />
           <h2>Initial Consultation</h2>
           <p>
-            We start with a free initial consultation to understand your legal
-            needs and provide an overview of our services.
+            We begin with a free initial consultation to understand your legal
+            needs. During this session, we will also give you and overview of
+            services we offer.
           </p>
         </div>
 
@@ -414,8 +757,11 @@
           />
           <h2>Strategic Planning</h2>
           <p>
-            We develop a tailored legal strategy based on the specifics of your
-            case and your desired outcomes.
+            We create a customised legal strategy that is specifically design
+            for your case, taking into account all the details of your situation
+            and the outcomes you want to achieve. This personalized approach and
+            ensures that we address your unique needs effectively and
+            efficiently.
           </p>
         </div>
 
@@ -429,8 +775,10 @@
           />
           <h2>Research and Preparation</h2>
           <p>
-            Our team conducts thorough research and prepares all necessary
-            documents and evidence to build a strong case.
+            Our team conducts extensive research together all pertinent
+            information and prepares all required documents and evidence
+            meticulously. This ensures that we build a robust case foundation
+            ready to support your legal objectives effectively.
           </p>
         </div>
 
@@ -444,8 +792,10 @@
           />
           <h2>Representation</h2>
           <p>
-            We represent you in court or negotiations, advocating for your best
-            interests every step of the way.
+            We act as your representatives whether in court or during
+            negotiation advocating passionately for your best interest at every
+            stage of the process. Our goal is to ensure that your voice is heard
+            and your rights are protected with dedication and expertise.
           </p>
         </div>
       </div>

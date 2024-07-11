@@ -29,9 +29,6 @@ document.getElementById("closeBtn").addEventListener("click", function () {
 });
 
 // contact pupup.js
-document.getElementById("contact-a").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "flex";
-});
 
 document.querySelector("#close-btn").addEventListener("click", function () {
   document.getElementById("popup").style.display = "none";
@@ -76,22 +73,41 @@ cells.forEach(function (cell) {
 });
 
 // disclaimer
-// Function to open the popup when the page first loads
-window.addEventListener("load", function () {
-  document.getElementById("disclaimerPopup").style.display = "block";
+window.onload = function () {
+  const modal = document.getElementById("disclaimer-modal");
+  const agreeBtn = document.getElementById("agree-btn");
+  const disagreeBtn = document.getElementById("disagree-btn");
+
+  agreeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  disagreeBtn.addEventListener("click", function () {
+    window.location.href = "https://www.google.com"; // Redirect to another page or URL
+  });
+};
+
+// Incriment Animation
+function animateValue(obj, start, end, duration, pauseDuration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.textContent = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    } else {
+      setTimeout(() => {
+        startTimestamp = null;
+        window.requestAnimationFrame(step);
+      }, pauseDuration);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+document.querySelectorAll(".incr-anim").forEach((element) => {
+  const textContent = element.textContent;
+  const numericValue = parseInt(textContent.replace(/[^\d]/g, ""), 10); // Extract only the numeric part
+  animateValue(element, 0, numericValue, 2000, 2000);
 });
-
-// Function to close the popup
-function closePopup() {
-  document.getElementById("disclaimerPopup").style.display = "none";
-}
-
-// Function to handle agreement
-function agree() {
-  document.getElementById("disclaimerPopup").style.display = "none";
-}
-
-// Function to handle disagreement (redirect to Google)
-function disagree() {
-  window.location.href = "https://www.google.com";
-}

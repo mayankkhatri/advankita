@@ -322,8 +322,7 @@ a {
   text-wrap: nowrap;
 }
 .flickity-button {
-  height: 25px !important;
-  width: 25px !important;
+  scale: 60%;
 }
 .flickity-page-dots {
   scale: 50%;

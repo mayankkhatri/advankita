@@ -73,10 +73,28 @@ cells.forEach(function (cell) {
 });
 
 // disclaimer
+
+const disclaimerPopup = document.getElementById("disclaimer-modal");
+const agreeBtn = document.getElementById("agree-btn");
+
+// Check if user has already agreed to the disclaimer
+if (sessionStorage.getItem("disclaimerAgreed")) {
+  disclaimerPopup.style.display = "none";
+}
+
+agreeBtn.addEventListener("click", function () {
+  sessionStorage.setItem("disclaimerAgreed", "true");
+  disclaimerPopup.style.display = "none";
+});
+
 window.onload = function () {
   const modal = document.getElementById("disclaimer-modal");
   const agreeBtn = document.getElementById("agree-btn");
   const disagreeBtn = document.getElementById("disagree-btn");
+
+  if (!sessionStorage.getItem("disclaimerAgreed")) {
+    modal.style.display = "flex";
+  }
 
   agreeBtn.addEventListener("click", function () {
     modal.style.display = "none";

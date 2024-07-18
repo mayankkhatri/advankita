@@ -83,6 +83,7 @@ body {
   border-radius: 5px;
   display: inline-block;
   margin-top: 0.1rem;
+  text-decoration: none;
 }
 
 .info-card {

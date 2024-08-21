@@ -322,7 +322,7 @@ a {
   text-wrap: nowrap;
 }
 .flickity-button {
-  scale: 60%;
+  scale: 50%;
 }
 .flickity-page-dots {
   scale: 50%;
@@ -696,6 +696,7 @@ footer h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 6;
 }
 
 .chat-popup {

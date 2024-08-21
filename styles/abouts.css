@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  background-color: #fefefe;
+  color: #333;
+}
+
+.photo-back img {
+  width: 100vw;
+  height: 100vw;
+}
+.about-photo {
+  position: relative;
+}
+
+.about-icons a {
+  display: block;
+  margin: calc(0.5rem + 1vh) 0.2rem;
+}
+.about-icons i {
+  font-size: calc(1rem + 3vw);
+  color: white;
+  margin: 0.5rem;
+}
+.about-icons {
+  position: absolute;
+  top: calc(10px + 7vh);
+  right: 0;
+}
+
+.contact-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.contact-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-circle img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.curved-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 10s linear 100;
+}
+
+.curved-text text {
+  font-size: 8px;
+  fill: white;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-contact {
+  position: absolute;
+  bottom: 0.5vw;
+  left: -35px;
+}
+
+.about-stats {
+  position: absolute;
+  bottom: -25px;
+  display: grid;
+  place-items: center;
+}
+.about-stats img {
+  width: 95%;
+}
+
+.blog-link {
+  font-size: 0.7rem;
+  color: aliceblue;
+  background-color: black;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  justify-self: end;
+  margin-right: 5vw;
+}
+.blog-arrow {
+  font-size: 0.85rem;
+  margin-left: 0;
+}
+
+/*! FOundwrs desk */
+.founders-desk {
+  margin: calc(0.5rem + 4vw) calc(0.2rem + 4vw);
+  text-align: justify;
+}
+
+.certi {
+  background-color: white;
+  border: 1px solid #ebeaeb;
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
+    -0.5px -0.5px 4px rgba(0, 0, 0, 0.03);
+  padding: calc(0.2rem + 4vw);
+  padding-top: 1.2rem;
+  border-radius: 8px;
+  border-top-left-radius: 1.5rem;
+}
+
+.certi-title {
+  font-size: calc(1rem + 4vw);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.certi-content {
+  line-height: 1.6; /* Adjust as needed for overall paragraph spacing */
+}
+
+.spacer {
+  display: block;
+  margin-bottom: 20px; /* Adjust this value to set the space after each <br /> */
+  content: "";
+}
+
+.spaced {
+  margin-bottom: 1rem;
+  display: block;
+}
+.certi-content {
+  font-size: calc(0.5em + 1vw);
+}
+
+.certi-pen {
+  font-size: calc(2rem + 4vw);
+  color: #00a36c;
+  margin-right: 0.4rem;
+}
+
+.sign {
+  font-family: "Qwitcher Grypen", cursive;
+  text-align: right;
+  margin-top: 1rem;
+  font-size: calc(0.5rem + 4vw);
+}
+
+@media (min-width: 910px) {
+  /* Base styles for desktop layout */
+  .desk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Adjust gap as needed */
+    align-items: start;
+  }
+
+  .founders-desk,
+  .about-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure images and content inside sections fit properly */
+  .photo-back img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .certi {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .founders-desk {
+    margin: 0;
+  }
+
+  .certi {
+    padding: calc(0.2rem + 2vw);
+    padding-top: 1.2rem;
+    border-radius: 8px;
+    border-top-left-radius: 1.5rem;
+  }
+
+  .certi-title {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .certi-pen {
+    font-size: calc(2rem + 1vw);
+    color: #00a36c;
+    margin-right: 0.4rem;
+  }
+
+  .certi-content {
+    line-height: 1.6; /* Adjust as needed for overall paragraph spacing */
+  }
+
+  .spacer {
+    display: block;
+    margin-bottom: 20px; /* Adjust this value to set the space after each <br /> */
+    content: "";
+  }
+
+  .spaced {
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .certi-content {
+    font-size: calc(0.5em + 0.55vw);
+  }
+
+  .sign {
+    font-family: "Qwitcher Grypen", cursive;
+    text-align: right;
+    margin-top: 1rem;
+    font-size: calc(0.5rem + 4vw);
+  }
+
+  .desk-grid {
+    margin-bottom: 3rem;
+  }
+
+  .circle-contact {
+    position: absolute;
+    bottom: calc(20px + 2vh);
+    left: -35px;
+  }
+  .about-icons {
+    margin-top: 2rem;
+  }
+  .about-icons a {
+    margin: calc(0.5rem + 2vh) 0.2rem;
+  }
+  .about-icons i {
+    font-size: calc(1rem + 2vw);
+    color: white;
+    margin: 0.5rem;
+  }
+}

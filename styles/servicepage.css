@@ -19,6 +19,11 @@ body {
   background: no-repeat center center/cover;
   position: relative;
 }
+.banner {
+  background-size: cover !important; /* Ensures the image covers the entire div */
+  background-position: center !important; /* Centers the image */
+  background-repeat: no-repeat !important; /* Prevents the image from repeating */
+}
 
 .banner h1 {
   position: absolute;
@@ -46,13 +51,24 @@ body {
   opacity: 1; /* Fade in */
 }
 
-h2 {
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
   font-size: 28px;
   color: #444;
   margin-bottom: 15px;
   border-bottom: 2px solid #007bff;
   padding-bottom: 5px;
   margin-top: 30px;
+}
+
+.useful-head h5 {
+  border-bottom: none;
+}
+
+.contact-section h2 {
+  border-bottom: none;
 }
 
 p,

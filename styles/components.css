@@ -1,3 +1,4 @@
+/*! Header   */
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,17 +7,17 @@
   margin-top: 6px;
   border-bottom: 1px solid #ebeaeb89;
   border-radius: 1rem;
-  margin-bottom: -5px;
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
   border-radius: 50%;
 }
 
 .nav {
   display: flex;
   gap: 10px;
+  margin-top: 1.35rem;
 }
 
 .nav a {
@@ -26,7 +27,14 @@
   font-weight: 500;
 }
 
+.services-link {
+  display: block;
+  margin-bottom: 2rem;
+}
+
 #contact-a {
+  display: inline-block;
+  height: min-content;
   background-color: black;
   color: white;
   padding: 4px 12px;
@@ -51,7 +59,7 @@
 .dropdown-menu {
   display: none; /* Hidden by default */
   position: absolute;
-  top: 100%; /* Position below the "Services" link */
+  top: 60%; /* Position below the "Services" link */
   left: 0;
   background-color: #fff;
   padding: 10px 0;
@@ -78,17 +86,17 @@
   display: block;
 }
 
+/*! Header   */
+
 /* Footer LInks  */
 
 .useful-links {
   background-color: #051020;
   margin: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .useful-head {
-  margin: calc(0.4rem + 2vw);
+  margin: 0 calc(0.4rem + 2vw);
   display: flex;
   align-items: center;
   padding-top: 1rem;

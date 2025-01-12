@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", serif;
+  font-family: "Tinos", serif !important;
 }
 
 a {
@@ -270,7 +270,7 @@ a {
   position: absolute;
   width: 100%;
   height: 115%;
-  transform: scaleY(1.1);
+  transform: scaleY(1);
   z-index: -10;
   object-fit: cover;
   overflow-x: hidden;
@@ -310,7 +310,7 @@ a {
 .about-us-card {
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
   background-color: white;
   border: 1px solid #ebeaeb;
   box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
@@ -333,13 +333,14 @@ a {
   flex: 1;
   max-width: 40%;
   overflow: hidden;
+  height: calc(25vh + 20vw);
+  padding: 0.5rem;
 }
 
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-height: 320px;
   border-radius: 5px;
 }
 
@@ -501,7 +502,6 @@ a {
   z-index: -10;
   width: 100%;
   height: 100%;
-  transform: scaleY(1.35); /* Scale vertically by 1.5 times */
   object-fit: cover;
 }
 
@@ -513,7 +513,7 @@ a {
 .promise-card {
   position: relative;
   margin: 2.2rem 1.5rem;
-  padding: 0.7rem 1rem;
+  padding: 1.2rem !important;
   border-radius: 15px;
   border: 1px solid #ebeaeb;
   box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
@@ -528,7 +528,7 @@ a {
 }
 
 .promise-card p {
-  font-size: 12px;
+  font-size: 1.5rem !important;
   font-weight: 420;
 }
 
@@ -578,17 +578,17 @@ a {
 }
 
 .step img {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
 }
 
 .step h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 15px 0;
 }
 
 .step p {
-  font-size: 0.8em;
+  font-size: 1.1em;
   margin: 0 auto;
   text-align: justify;
 }
@@ -628,7 +628,7 @@ a {
 
 .carousel-cell-blog h3 {
   font-weight: 470;
-  font-size: 0.7rem;
+  font-size: 0.88rem !important;
   margin-left: 0.2rem;
   text-wrap: nowrap;
 }
@@ -690,63 +690,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   font-size: 0.8rem;
-}
-
-/*Contact   */
-.center-txt-c {
-  text-align: center;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  margin-top: 2rem;
-}
-.contact-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 20px;
-}
-
-.contact-details {
-  flex: 1;
-  margin-right: 20px;
-}
-.map {
-  position: relative;
-}
-.map-embed {
-  flex: 1;
-  border-radius: 1rem;
-  position: absolute;
-  right: 0;
-}
-
-.contact-details p {
-  margin: 1rem 0;
-  font-size: 0.9rem;
-}
-.contact-details p:nth-child(1) {
-  font-weight: 600;
-  margin-top: 0;
-}
-.contact-details a {
-  display: block;
-  margin: 1rem 0;
-  color: #007bff;
-}
-
-.office-address {
-  font-size: 0.6rem;
-  text-align: left;
-  transform: translateY(180px);
-  width: 150px;
 }
 
 .horizontal-line {
@@ -1341,3 +1284,78 @@ textarea {
     font-size: 1rem;
   }
 }
+
+/* contact info */
+
+/*! Contact Me   */
+.contact-me {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: #051020;
+  margin-bottom: 0;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.contact-title img {
+  width: 50px;
+  height: 50px;
+}
+
+.contact-title h4 {
+  font-size: calc(2vh + 2vw);
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+.map-embed iframe {
+  width: 90%;
+  height: calc(25vw + 12vh);
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.pins {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.pin i {
+  font-size: calc(1.5vh + 1vw);
+}
+
+.pin p {
+  font-size: calc(1vh + 1vw);
+}
+
+@media screen and (max-width: 600px) {
+  .pins {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1.55rem;
+  }
+
+  .pin {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+/*! Contact Me   */

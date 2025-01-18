@@ -509,6 +509,7 @@ a {
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: -1rem;
+  font-size: calc(2.8vh + 2.5vw) !important;
 }
 .promise-card {
   position: relative;

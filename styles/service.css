@@ -282,7 +282,7 @@ body {
   position: absolute;
   bottom: calc(3px + 1vw);
   left: calc(3px + 1vw); /* Changed from margin-left for better positioning */
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
   z-index: 2; /* Ensure text is above the gradient */
@@ -302,7 +302,6 @@ body {
   .service-tile {
     width: 20vw;
     height: 20vw;
-    background-color: red;
   }
   .steps-video {
     width: 65vw;

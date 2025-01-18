@@ -135,7 +135,7 @@ body {
 }
 
 .certi-title {
-  font-size: calc(1rem + 4vw);
+  font-size: calc(1.5rem + 5vw);
   text-align: center;
   margin-bottom: 1.2rem;
 }
@@ -155,7 +155,7 @@ body {
   display: block;
 }
 .certi-content {
-  font-size: calc(0.5em + 1vw);
+  font-size: calc(0.3em + 1vw) !important;
 }
 
 .certi-pen {
@@ -165,7 +165,7 @@ body {
 }
 
 .sign {
-  font-family: "Qwitcher Grypen", cursive;
+  font-family: "Qwitcher Grypen", cursive !important;
   text-align: right;
   margin-top: 1rem;
   font-size: calc(0.5rem + 4vw);

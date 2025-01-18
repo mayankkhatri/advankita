@@ -15,6 +15,10 @@
       href="https://i.postimg.cc/fbCwy9P7/agass-logo.jpg"
       type="image/jpeg"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/components.css" />
 
     <style>
@@ -24,6 +28,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      header {
+        font-family: "Tinos", serif !important;
       }
 
       body,
@@ -408,10 +416,6 @@
         }
       }
     </style>
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <header class="header">
@@ -422,11 +426,20 @@
         />
       </a>
       <nav class="nav">
-        <a
+        <a href="/index.html"><i class="ri-home-4-line"></i></a
+        ><a
           href="https://khatrie.notion.site/Ankita-s-Blog-962da7005a2149b3a4053ac9753d4d2a"
           >Blog</a
         >
-        <a href="services.html">Services</a>
+        <div class="dropdown">
+          <a href="services.html" class="services-link">Services</a>
+          <div class="dropdown-menu">
+            <a href="/service/criminalcases.html">Criminal Cases</a>
+            <a href="/service/corporatelaw.html">Corporate Cases</a>
+            <a href="/service/cybercrime.html">Cyber Crime</a>
+            <a href="/services.html">View All</a>
+          </div>
+        </div>
         <a href="about.html">About</a>
         <a href="contact.html" id="contact-a">Contact</a>
       </nav>
@@ -465,17 +478,17 @@
           <div class="social-media">
             <p>Connect with us :</p>
             <div class="social-icons">
-              <a href="https://www.facebook.com/Legalankita999/">
-                <i class="fab fa-facebook-f"></i>
+              <a href="#">
+                <i class="ri-facebook-box-line"></i>
               </a>
-              <a href="https://wa.link/8m2v4x">
-                <i class="fab fa-whatsapp"></i>
+              <a href="#">
+                <i class="ri-twitter-x-line"></i>
               </a>
-              <a href="https://www.instagram.com/advocate_ankita_goswami">
-                <i class="fab fa-instagram"></i>
+              <a href="#">
+                <i class="ri-instagram-line"></i>
               </a>
-              <a href="https://www.linkedin.com/in/adv-ankita-goswami-37261b93">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="#">
+                <i class="ri-linkedin-box-line"></i>
               </a>
             </div>
           </div>

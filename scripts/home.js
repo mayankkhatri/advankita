@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     origin: "bottom",
     opacity: 0,
     scale: 0.85,
-    reset: true, // Animation can happen each time an element comes into view
   });
 });
 

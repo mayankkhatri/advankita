@@ -325,3 +325,15 @@ body {
     font-size: 15px;
   }
 }
+/*! Foundation Banner */
+
+.foundation-banner img {
+  display: block;
+  width: 88%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  border: 1px solid #ebeaeb;
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
+    -0.5px -0.5px 4px rgba(0, 0, 0, 0.03);
+}
+/*! Foundation Banner */

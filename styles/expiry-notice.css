@@ -1,19 +1,20 @@
 #godaddy-expiry-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #ffffff;
-  z-index: 9999999; /* Ensure it covers everything */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111111;
-  margin: 0;
-  padding: 0;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: #ffffff !important;
+  z-index: 2147483647 !important; /* Maximum z-index */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #111111 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .expiry-container {
@@ -21,24 +22,26 @@
   max-width: 600px;
   padding: 40px;
   background: #ffffff;
+  width: 100%;
 }
 
 .godaddy-logo {
   width: 200px;
+  max-width: 80%;
   margin-bottom: 40px;
 }
 
 .expiry-container h1 {
-  font-size: 48px;
+  font-size: clamp(32px, 8vw, 48px);
   font-weight: 700;
   margin-bottom: 20px;
   color: #111111;
-  word-break: break-all;
+  word-break: break-word;
   letter-spacing: -1px;
 }
 
 .expiry-message {
-  font-size: 22px;
+  font-size: clamp(18px, 5vw, 22px);
   margin-bottom: 40px;
   color: #333333;
   font-weight: 400;
@@ -58,24 +61,38 @@
 }
 
 .renew-btn {
-  background-color: #00838c; /* Classic GoDaddy Teal */
-  color: #ffffff;
-  border: none;
-  padding: 16px 48px;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-  display: inline-block;
+  background-color: #00838c !important; /* Classic GoDaddy Teal */
+  color: #ffffff !important;
+  border: none !important;
+  padding: 16px 48px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
 }
 
 .renew-btn:hover {
-  background-color: #006066;
+  background-color: #006066 !important;
 }
 
-/* Hide body scroll when overlay is active */
-body {
+/* Aggressively hide EVERYTHING ELSE inside the body */
+body > *:not(#godaddy-expiry-overlay):not(link):not(script):not(style) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Force body and html to take exactly 100vh/100vw and never scroll */
+html, body {
   overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: #ffffff !important;
 }

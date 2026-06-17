@@ -1,0 +1,81 @@
+#godaddy-expiry-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999999; /* Ensure it covers everything */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
+.expiry-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.godaddy-logo {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+.expiry-container h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111111;
+  word-break: break-all;
+  letter-spacing: -1px;
+}
+
+.expiry-message {
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.expiry-actions {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+.expiry-actions p {
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.renew-btn {
+  background-color: #00838c; /* Classic GoDaddy Teal */
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.renew-btn:hover {
+  background-color: #006066;
+}
+
+/* Hide body scroll when overlay is active */
+body {
+  overflow: hidden !important;
+}

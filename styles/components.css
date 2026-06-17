@@ -318,7 +318,8 @@ footer h1 {
   background-color: #fff;
   max-width: 1200px;
   margin: 2.5rem auto;
-  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
+  box-shadow:
+    0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
     -0.5px -0.5px 4px rgba(0, 0, 0, 0.03);
 }
 
